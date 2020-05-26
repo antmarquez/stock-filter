@@ -13,15 +13,16 @@ public class MakeMeRich {
 	public static void main(String[] args) {
 
 		// 1. Print these symbols using a Java 8 for-each and lambdas
-		symbols.stream().forEach(System.out::println);
-		// 2. Use the StockUtil class to print the price of Bitcoin
-		System.out.println("Price of Bitcoin: " + StockUtil.getPrice("BTC-USD"));
-		// 3. Create a new List of StockInfo that includes the stock price
-		List<StockInfo> stock = StockUtil.prices.entrySet().stream().map(x -> new StockInfo(x.getKey(), x.getValue()))
-				.collect(Collectors.toList());
-		// 4. Find the highest-priced stock under $500
-		StockInfo highestPricedStock = stock.stream().filter(StockUtil.isPriceLessThan(500)).reduce(StockUtil::pickHigh).get();
-		System.out.println("The highest-priced stock under $500 is " + highestPricedStock);
+			symbols.stream().forEach(System.out::println);
+			// 2. Use the StockUtil class to print the price of Bitcoin
+			System.out.println("Price of Bitcoin: " + StockUtil.getPrice("BTC-USD"));
+			// 3. Create a new List of StockInfo that includes the stock price
+			List<StockInfo> stock = StockUtil.prices.entrySet().stream().map(x -> new StockInfo(x.getKey(), x.getValue()))
+					.collect(Collectors.toList());
+			// 4. Find the highest-priced stock under $500
+			StockInfo highestPricedStock = stock.stream().filter(StockUtil.isPriceLessThan(500)).reduce(StockUtil::pickHigh).get();
+			System.out.println("The highest-priced stock under $500 is " + highestPricedStock);
 	}
 
 }
+// Copyright Anthony Marquez, 2020

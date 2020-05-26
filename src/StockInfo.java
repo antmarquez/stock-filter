@@ -12,3 +12,4 @@ public class StockInfo {
 		return ticker + " " + price + ", ";
 	}
 }
+// Copyright Anthony Marquez, 2020

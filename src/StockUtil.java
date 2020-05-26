@@ -44,3 +44,4 @@ public class StockUtil {
 		}
 	};
 }
+// Copyright Anthony Marquez, 2020

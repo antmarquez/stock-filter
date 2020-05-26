@@ -11,3 +11,4 @@ public class TimeIt {
 		}
 	}
 }
+// Copyright Anthony Marquez, 2020
